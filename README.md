@@ -24,10 +24,6 @@ $ docker run -it --rm -p 8080:80 ghcr.io/michaeltrip/nginx-nc:latest
 $ podman run -it --rm -p 8080:80 ghcr.io/michaeltrip/nginx-nc:latest
 ```
 
-```bash
-$ podman run -it --rm ghcr.io/michaeltrip/iperf3container:latest -c <iperf3hostname> -p <targetport> -t <duration_in_seconds>
-```
-
 ### Kubernetes
 
 I have created two seperate deployments, a `nginx` deployment with a `service` object running on port `8080` and a "pretending to be" `postgresql` container with this image with a service object running on `5432`. This to simulate a network connection between those two.
